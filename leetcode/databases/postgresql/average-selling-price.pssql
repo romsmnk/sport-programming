@@ -1,7 +1,7 @@
 -- Runtime 214 ms Beats 67.59%
 -- Memory 0.00 MB Beats 100.00%
 
--- problem id: 1389738430
+-- problem name: Average Selling Price
 
 SELECT      Prices.product_id,
             COALESCE(ROUND(SUM(units * price)::numeric / SUM(units), 2), 0) as average_price
