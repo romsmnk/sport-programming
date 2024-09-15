@@ -1,0 +1,12 @@
+-- problem name: 176. Second Highest Salary
+
+-- Runtime 248 ms Beats 35.13%
+-- Memory 0.00 MB Beats 100.00%
+
+SELECT COALESCE((
+    SELECT DISTINCT salary
+    FROM            Employee
+    ORDER BY        salary DESC
+    OFFSET          1
+    ROW FETCH NEXT  1 ROW ONLY
+), null)            AS "SecondHighestSalary";
