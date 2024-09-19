@@ -1,4 +1,4 @@
--- Runtime 1514 ms Beats 10.48%
+-- Runtime 967 ms Beats 83.89%
 -- Memory 0.00 MB Beats 100.00%
 
 -- problem: 1633. Percentage of Users Attended a Contest
@@ -12,8 +12,8 @@ FROM
 GROUP BY
         contest_id
 ORDER BY
-        percentage DESC,
-        contest_id ASC;
+        2 DESC,
+        1;
 
 -- Runtime 1084 ms Beats 57.41%
 -- Memory 0.00 MB Beats 100.00%
