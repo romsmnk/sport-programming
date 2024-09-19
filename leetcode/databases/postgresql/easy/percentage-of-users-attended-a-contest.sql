@@ -14,3 +14,17 @@ GROUP BY
 ORDER BY
         percentage DESC,
         contest_id ASC;
+
+-- Runtime 1084 ms Beats 57.41%
+-- Memory 0.00 MB Beats 100.00%
+
+WITH count_users AS (
+    SELECT COUNT(DISTINCT user_id) AS users
+    FROM users
+)
+SELECT 
+    contest_id,
+    ROUND(CAST(COUNT(DISTINCT user_id) AS NUMERIC) / MAX(users) * 100, 2) AS percentage
+FROM Register, count_users
+GROUP BY 1
+ORDER BY 2 DESC, 1;
