@@ -9,3 +9,8 @@ function createCounter(n: number): () => number {
       return n++;
   }
 }
+
+// Runtime 48ms Beats 89.46%
+// Memory 51.27 MB Beats 61.41%
+
+const createCounter2 = (n: number): () => number => () => n++;
