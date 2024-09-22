@@ -12,4 +12,3 @@ FROM
     Teacher
 GROUP BY
     1;
-
