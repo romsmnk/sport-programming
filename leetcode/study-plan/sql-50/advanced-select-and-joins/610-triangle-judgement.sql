@@ -13,3 +13,16 @@ SELECT
         AND (ABS(x) + ABS(z)) > ABS(y)
         ) THEN 'Yes' ELSE 'No' END) as triangle
 FROM Triangle;
+
+-- Runtime 183 ms Beats 74.75%
+-- Memory 0.00 MB Beats 100.00%
+
+SELECT
+    x,
+    y,
+    z,
+    CASE
+        WHEN x + y > z AND x + z > y AND y + z > x THEN 'Yes'
+        ELSE 'No'
+    END AS triangle
+FROM Triangle;
