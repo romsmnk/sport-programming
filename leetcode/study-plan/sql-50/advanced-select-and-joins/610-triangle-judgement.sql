@@ -14,7 +14,7 @@ SELECT
         ) THEN 'Yes' ELSE 'No' END) as triangle
 FROM Triangle;
 
--- Runtime 183 ms Beats 74.75%
+-- Runtime 179 ms Beats 80.38%
 -- Memory 0.00 MB Beats 100.00%
 
 SELECT
@@ -26,3 +26,13 @@ SELECT
         ELSE 'No'
     END AS triangle
 FROM Triangle;
+
+SELECT
+    t.x, t.y, t.z,
+CASE WHEN
+    (t.x + t.y > t.z)
+AND (t.x + t.z > t.y)
+AND (t.y + t.z > t.x)
+THEN 'Yes' ELSE 'No' END AS triangle
+FROM
+    Triangle t;
