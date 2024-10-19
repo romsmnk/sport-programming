@@ -3,7 +3,6 @@
 // Runtime 9ms Beats 100%
 // Memory 56.53 MB Beats 39.36%
 
-
 function romanToInt(s: string): number {
   const symbolList = s.split('').reverse();
   let sum = 0;
