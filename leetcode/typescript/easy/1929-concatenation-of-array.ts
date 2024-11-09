@@ -1,9 +1,13 @@
-// Problem: 2011. Final Value of Variable After Performing Operations
+// Problem: 1929. Concatenation of Array
 
 // Runtime 0ms Beats 100%
-// Memory 51.04 MB Beats 98.72%
+// Memory 55.00 MB Beats 19.34%
 
-function finalValueAfterOperations(operations: string[]): number {
-  const minuses = new Set(['--X', 'X--']);
-  return operations.reduce((acc, el) => minuses.has(el) ? acc - 1 : acc + 1, 0);
+function getConcatenation(nums: number[]): number[] {
+  return [...nums, ...nums];
 };
+
+const getConcatenation2 = (nums: number[]): number[] => nums.concat(nums);
+
+// Runtime 0ms Beats 100%
+// Memory 54.40 MB Beats 55.29%
